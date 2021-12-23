@@ -1,4 +1,5 @@
 import 'package:application/Design/CustomWidgets/button.dart';
+import 'package:application/Design/Pages/addtripform.dart';
 import 'package:flutter/material.dart';
 
 class home extends StatelessWidget {
@@ -29,7 +30,16 @@ class home extends StatelessWidget {
               SizedBox( height: 30, ),
               Text("You didn’t add any trips before.", style: TextStyle(color:Color(0xFF3F3F46) , fontSize: 16),),
               SizedBox( height: 130, ),
-              button(title: 'Start New Trip '),
+
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => addtripform()),
+                  );
+                },
+                child: buttondefault(title: 'Start New Trip '),
+              ),
             ],
           ),
         ),
