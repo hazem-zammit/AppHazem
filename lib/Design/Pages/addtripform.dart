@@ -67,13 +67,14 @@ class txtfield extends StatelessWidget {
         decoration: InputDecoration(
           filled: true,
           fillColor: Color(0xFFfafafa),
+          focusColor: Colors.white,
           enabledBorder: OutlineInputBorder (
             borderRadius: BorderRadius.all(Radius.circular(12.0)),
             borderSide: BorderSide(color: Color(0xFFF4F4F5), width: 1),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(12.0)),
-            borderSide: BorderSide(color: Colors.grey, width:2),
+            borderSide: BorderSide(color: Color(0xff84CC16), width:2),
           ),        
         ),
       ),

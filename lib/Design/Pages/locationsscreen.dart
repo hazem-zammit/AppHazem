@@ -1,6 +1,7 @@
 import 'package:application/Design/CustomWidgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:application/Design/Pages/locationsearch.dart';
 
 class locationsscreen extends StatelessWidget {
   const locationsscreen({ Key? key }) : super(key: key);
@@ -18,7 +19,15 @@ class locationsscreen extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child: Column(
             children: [
-              searchbar(),
+              GestureDetector(
+                onTap: (){
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => locationsearch()),
+                  );
+                },
+                child: searchbar(),
+              ),
               SizedBox(height: 20,),
               CarouselSlider(
                 options: CarouselOptions(
