@@ -16,6 +16,22 @@ import 'package:flutter/material.dart';
     );
   }
 
+
+    Widget buttonmedium({title}) {
+    return Container(
+      child:Align(
+        alignment: Alignment.center,
+        child: Text(title ,style: TextStyle(color: Colors.white, fontSize: 14 ,),textAlign: TextAlign.center,),
+      ),
+      height: 44,
+      width: 295,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: Color(0xFF84CC16),
+      ),
+    );
+  }
+
   Widget buttonsmall({title}) {
     return Container(
       child:Align(

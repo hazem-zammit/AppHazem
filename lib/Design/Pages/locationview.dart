@@ -40,7 +40,7 @@ class locationview extends StatelessWidget {
                     SizedBox(height: 20,),
                     Text("One of California’s Channel Islands, lies southwest of Los Angeles. It's known for its wildlife, dive sites and Mt. Orizaba, its highest peak. The resort town of Two Harbors lies to the north. Best for Campers." ,style: TextStyle(color: Color(0xffD4D4D8), fontSize: 16 ,),),
                     SizedBox(height: 20,),
-                    buttondefault(title: 'Select Location'),
+                    buttonmedium(title: 'Select Location'),
                     SizedBox(height: 20,),
                   ],
                 ),

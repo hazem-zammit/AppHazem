@@ -1,3 +1,5 @@
+import 'package:application/Design/CustomWidgets/txtfield.dart';
+import 'package:application/Design/Pages/addteammates1.dart';
 import 'package:application/Design/Pages/locationsscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:application/Design/CustomWidgets/button.dart';
@@ -42,7 +44,15 @@ class addtripform extends StatelessWidget {
               SizedBox(height: 8,),
               box(),
               SizedBox(height: 16,),
-              buttonmediumoutlined(title: 'Add New Teammates'),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => addteammatesempty()),
+                  );
+                },
+                child: buttonmediumoutlined(title: 'Add New Teammates'),
+              ),
               SizedBox(height: 20,),
               datepicker(),
               SizedBox(height: 24,),
@@ -55,32 +65,6 @@ class addtripform extends StatelessWidget {
   }
 }
 
-
-class txtfield extends StatelessWidget {
-  const txtfield({ Key? key }) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width:335 ,
-      height:48 ,
-      child:TextField(
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: Color(0xFFfafafa),
-          focusColor: Colors.white,
-          enabledBorder: OutlineInputBorder (
-            borderRadius: BorderRadius.all(Radius.circular(12.0)),
-            borderSide: BorderSide(color: Color(0xFFF4F4F5), width: 1),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(12.0)),
-            borderSide: BorderSide(color: Color(0xff84CC16), width:2),
-          ),        
-        ),
-      ),
-    );
-  }
-}
 
 class box extends StatelessWidget {
   const box({ Key? key }) : super(key: key);
