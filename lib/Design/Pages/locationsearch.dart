@@ -1,3 +1,4 @@
+import 'package:application/Design/Pages/locationview.dart';
 import 'package:flutter/material.dart';
 
 class locationsearch extends StatelessWidget {
@@ -53,40 +54,58 @@ class locationsearch extends StatelessWidget {
               SizedBox(
                 height: 40,
               ),
-              Row(
-                children: [
-                  Container(
-                    height: 70,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                            'images/Campingimage.png'),
-                        fit: BoxFit.fill,
-                      ),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Catalina Island', style: TextStyle(color: Colors.black, fontSize: 20,),),
-                        SizedBox(height: 5,),
-                        Text('Los Angeles, California', style: TextStyle(color: Colors.black, fontSize: 12),),
-                      ],),
-                  ),
-                  
-                ],
-      
-              ),
+              GestureDetector(onTap:(){
+                 Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => locationview()),
+                );
+              } ,
+              child: locationcard(),),
+              
             ],
       
           ),
         ),
       ),
+      
+    );
+  }
+}
+
+class locationcard extends StatelessWidget {
+  const locationcard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(
+          height: 70,
+          width: 100,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                  'images/Campingimage.png'),
+              fit: BoxFit.fill,
+            ),
+            borderRadius: BorderRadius.circular(16),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Catalina Island', style: TextStyle(color: Colors.black, fontSize: 20,),),
+              SizedBox(height: 5,),
+              Text('Los Angeles, California', style: TextStyle(color: Colors.black, fontSize: 12),),
+            ],),
+        ),
+        
+      ],
       
     );
   }
