@@ -11,7 +11,7 @@ class locationsscreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Image.asset('images/chevron-left.png'),
-        title: Text("Locations" ,style: TextStyle(color: Colors.black , fontSize: 20,),),
+        title: Text("Locations" ,style: TextStyle(color: Colors.black , fontSize: 20,fontWeight: FontWeight.w500,),),
         backgroundColor: Colors.transparent,
         elevation: 0,
         ),
@@ -38,7 +38,7 @@ class locationsscreen extends StatelessWidget {
                 items: imageSliders,
               ),
               SizedBox(height: 20,),
-              Text("Region" ,style: TextStyle(color: Colors.black , fontSize: 20,fontWeight: FontWeight.bold,),),
+              Text("Region" ,style: TextStyle(color: Colors.black , fontSize: 20,fontWeight: FontWeight.w600,),),
               SizedBox(height: 20,),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -49,18 +49,18 @@ class locationsscreen extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     width: 85,
-                    child:Text("Europe" ,style: TextStyle(color: Color(0xffE4E4E7) , fontSize: 24,),), 
+                    child:Text("Europe" ,style: TextStyle(color: Color(0xffE4E4E7) , fontSize: 24,fontWeight: FontWeight.w600,),), 
                   ),
                   
                   Container(
                     width:230,
-                    child:Text("North America" ,style: TextStyle(color: Colors.black , fontSize: 34,fontWeight: FontWeight.bold,),), 
+                    child:Text("North America" ,style: TextStyle(color: Colors.black , fontSize: 34,fontWeight: FontWeight.w600,),), 
                   ),
                   
                   Container(
                     
                     width: 200,
-                    child:Text("South Africa" ,style: TextStyle(color: Color(0xffE4E4E7) , fontSize: 24,),), 
+                    child:Text("South Africa" ,style: TextStyle(color: Color(0xffE4E4E7) , fontSize: 24,fontWeight: FontWeight.w600,),), 
                   ),
                   
                 ],
@@ -153,7 +153,7 @@ final List<Widget> imageSliders = imgList
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 24.0,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ),

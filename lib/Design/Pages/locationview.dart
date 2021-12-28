@@ -35,8 +35,8 @@ class locationview extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Catalina island' ,style: TextStyle(color: Colors.white, fontSize: 32 , fontWeight: FontWeight.w800),),
-                    Text('Los Angeles, California' ,style: TextStyle(color: Colors.white, fontSize: 16 ,),),
+                    Text('Catalina island' ,style: TextStyle(color: Colors.white, fontSize: 32 , fontWeight: FontWeight.w600),),
+                    Text('Los Angeles, California' ,style: TextStyle(color: Colors.white, fontSize: 16 ,fontWeight: FontWeight.w500,),),
                     SizedBox(height: 20,),
                     Text("One of California’s Channel Islands, lies southwest of Los Angeles. It's known for its wildlife, dive sites and Mt. Orizaba, its highest peak. The resort town of Two Harbors lies to the north. Best for Campers." ,style: TextStyle(color: Color(0xffD4D4D8), fontSize: 16 ,),),
                     SizedBox(height: 20,),

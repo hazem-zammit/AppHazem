@@ -99,7 +99,7 @@ class locationcard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Catalina Island', style: TextStyle(color: Colors.black, fontSize: 20,),),
+              Text('Catalina Island', style: TextStyle(color: Colors.black, fontSize: 20,fontWeight: FontWeight.w600,),),
               SizedBox(height: 5,),
               Text('Los Angeles, California', style: TextStyle(color: Colors.black, fontSize: 12),),
             ],),

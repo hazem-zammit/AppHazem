@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
     return Container(
       child:Align(
         alignment: Alignment.center,
-        child: Text(title ,style: TextStyle(color: Colors.white, fontSize: 14 ,),textAlign: TextAlign.center,),
+        child: Text(title ,style: TextStyle(color: Colors.white, fontSize: 14,fontWeight: FontWeight.w500 ,),textAlign: TextAlign.center,),
       ),
       height: 44,
       width: 335,
@@ -21,7 +21,7 @@ import 'package:flutter/material.dart';
     return Container(
       child:Align(
         alignment: Alignment.center,
-        child: Text(title ,style: TextStyle(color: Colors.white, fontSize: 14 ,),textAlign: TextAlign.center,),
+        child: Text(title ,style: TextStyle(color: Colors.white, fontSize: 14 ,fontWeight: FontWeight.w500,),textAlign: TextAlign.center,),
       ),
       height: 44,
       width: 295,
@@ -36,7 +36,7 @@ import 'package:flutter/material.dart';
     return Container(
       child:Align(
         alignment: Alignment.center,
-        child: Text(title ,style: TextStyle(color: Colors.white, fontSize: 14 ,),textAlign: TextAlign.center,),
+        child: Text(title ,style: TextStyle(color: Colors.white, fontSize: 14 ,fontWeight: FontWeight.w500,),textAlign: TextAlign.center,),
       ),
       height: 44,
       width: 163,
@@ -51,7 +51,7 @@ import 'package:flutter/material.dart';
     return Container(
       child:Align(
         alignment: Alignment.center,
-        child: Text(title ,style: TextStyle(color: Color(0xFF84CC16), fontSize: 14 ,),textAlign: TextAlign.center,),
+        child: Text(title ,style: TextStyle(color: Color(0xFF84CC16), fontSize: 14,fontWeight: FontWeight.w500 ,),textAlign: TextAlign.center,),
       ),
       height: 44,
       width: 335,
@@ -67,7 +67,7 @@ import 'package:flutter/material.dart';
     return Container(
       child:Align(
         alignment: Alignment.center,
-        child: Text(title ,style: TextStyle(color: Color(0xFF84CC16), fontSize: 14 ,),textAlign: TextAlign.center,),
+        child: Text(title ,style: TextStyle(color: Color(0xFF84CC16), fontSize: 14,fontWeight: FontWeight.w500 ,),textAlign: TextAlign.center,),
       ),
       height: 44,
       width: 134,
@@ -83,7 +83,7 @@ import 'package:flutter/material.dart';
     return Container(
       child:Align(
         alignment: Alignment.center,
-        child: Text(title ,style: TextStyle(color: Color(0xFF84CC16), fontSize: 14 ,),textAlign: TextAlign.center,),
+        child: Text(title ,style: TextStyle(color: Color(0xFF84CC16), fontSize: 14,fontWeight: FontWeight.w500 ,),textAlign: TextAlign.center,),
       ),
       height: 44,
       width: 174,

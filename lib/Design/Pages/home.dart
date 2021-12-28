@@ -56,7 +56,7 @@ class _homeState extends State<home> with TickerProviderStateMixin{
                     });
                   },
                 ),
-                title: Text("Camping Trips" ,style: TextStyle(color: Colors.black , fontSize: 20,),),
+                title: Text("Camping Trips" ,style: TextStyle(color: Colors.black , fontSize: 20,fontWeight: FontWeight.w500),),
                 centerTitle: true,
                 actions: [Container(
                   width: 50,
@@ -124,7 +124,7 @@ class idbox extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("CMP21992822",style: TextStyle(color: Color(0xFF365314), fontSize: 16),),
+                Text("CMP21992822",style: TextStyle(color: Color(0xFF365314), fontSize: 16,fontWeight: FontWeight.w500),),
                 Image.asset('images/copy.png') ,
               ],
             ),

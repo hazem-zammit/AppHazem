@@ -9,7 +9,7 @@ class notifications extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Image.asset('images/chevron-left.png'),
-        title: Text("Notifications" ,style: TextStyle(color: Colors.black , fontSize: 20,),),
+        title: Text("Notifications" ,style: TextStyle(color: Colors.black , fontSize: 20,fontWeight: FontWeight.w500),),
         backgroundColor: Colors.transparent,
         elevation: 0,
         ),
@@ -18,11 +18,11 @@ class notifications extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Text('11 Feb 2020',style: TextStyle(color: Color(0xffA1A1AA),fontSize: 12,),)),
+              Center(child: Text('11 Feb 2020',style: TextStyle(color: Color(0xffA1A1AA),fontSize: 12,fontWeight: FontWeight.w400),)),
               SizedBox(height: 15,),
               notifcard(icon:'images/award.png',title:'Congratulations!',text:'You recieved the welcome badge'),
               SizedBox(height: 20,),
-              Center(child: Text('11 Feb 2020',style: TextStyle(color: Color(0xffA1A1AA),fontSize: 12,),)),
+              Center(child: Text('11 Feb 2020',style: TextStyle(color: Color(0xffA1A1AA),fontSize: 12,fontWeight: FontWeight.w400),)),
               SizedBox(height: 15,),
               notifcard(icon:'images/person-add.png' ,title:'Will Smith Invite you.',text:'For Catalina Island Trip.'),
               
@@ -61,8 +61,9 @@ class notifications extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(title,style: TextStyle(color: Color(0xff365314),fontSize: 14),),
-                Text(text,style: TextStyle(color: Color(0xff4D7C0F),fontSize: 14),),
+                Text(title,style: TextStyle(color: Color(0xff365314),fontSize: 14,fontWeight: FontWeight.w500),),
+                SizedBox(height: 5,),
+                Text(text,style: TextStyle(color: Color(0xff4D7C0F),fontSize: 14 ,fontWeight: FontWeight.w400),),
               ],
             ),
           ],

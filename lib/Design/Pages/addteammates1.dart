@@ -10,7 +10,7 @@ class addteammatesempty extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Image.asset('images/chevron-left.png'),
-        title: Text("Add Teammates" ,style: TextStyle(color: Colors.black , fontSize: 20,),),
+        title: Text("Add Teammates" ,style: TextStyle(color: Colors.black , fontSize: 20,fontWeight: FontWeight.w500,),),
         backgroundColor: Colors.transparent,
         elevation: 0,
         ),

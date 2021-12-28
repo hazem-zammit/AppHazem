@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Camping App',
       theme: ThemeData(
+        fontFamily: 'SF-Pro-Text',
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.white ,        
       ),
