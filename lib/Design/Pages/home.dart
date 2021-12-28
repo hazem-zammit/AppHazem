@@ -1,6 +1,7 @@
 import 'package:application/Design/CustomWidgets/button.dart';
 import 'package:application/Design/Pages/addtripform.dart';
 import 'package:application/Design/Pages/drawermenu.dart';
+import 'package:application/Design/Pages/notifications.dart';
 import 'package:flutter/material.dart';
 
 class home extends StatefulWidget {
@@ -38,7 +39,6 @@ class _homeState extends State<home> with TickerProviderStateMixin{
                   icon: AnimatedIcon(icon: AnimatedIcons.menu_arrow,
                   color:Colors.black,
                   progress: _animationController),
-
                   onPressed: (){
                     toggle= !toggle;
                     if(toggle){
@@ -55,15 +55,22 @@ class _homeState extends State<home> with TickerProviderStateMixin{
                     setState(() {
                     });
                   },
-
                 ),
-
-                
                 title: Text("Camping Trips" ,style: TextStyle(color: Colors.black , fontSize: 20,),),
                 centerTitle: true,
                 actions: [Container(
                   width: 50,
-                  child:Image.asset('images/bell.png'),
+                  child:
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => notifications()),
+                        );
+                      },
+                      child: Image.asset('images/bell.png'),
+                    ),
+                  
                 )],
                 backgroundColor: Colors.transparent,
                 elevation: 0,
@@ -79,7 +86,6 @@ class _homeState extends State<home> with TickerProviderStateMixin{
                       SizedBox( height: 30, ),
                       Text("You didn’t add any trips before.", style: TextStyle(color:Color(0xFF3F3F46) , fontSize: 16),),
                       SizedBox( height: 130, ),
-                  
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
