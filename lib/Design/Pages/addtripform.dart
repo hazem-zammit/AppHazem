@@ -1,8 +1,10 @@
 import 'package:application/Design/CustomWidgets/txtfield.dart';
 import 'package:application/Design/Pages/addteammates1.dart';
 import 'package:application/Design/Pages/locationsscreen.dart';
+import 'package:application/Design/Pages/preparebag.dart';
 import 'package:flutter/material.dart';
 import 'package:application/Design/CustomWidgets/button.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class addtripform extends StatelessWidget {
   const addtripform({ Key? key }) : super(key: key);
@@ -54,15 +56,59 @@ class addtripform extends StatelessWidget {
                 child: buttonmediumoutlined(title: 'Add New Teammates'),
               ),
               SizedBox(height: 20,),
-              datepicker(),
+              GestureDetector(
+                onTap: (){
+                  showDialogFunc(context);
+                },
+                child: datepicker(),
+              ),
               SizedBox(height: 24,),
-              buttondefault(title: 'Start'),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => preparebag()),
+                  );
+                },
+                child: buttondefault(title: 'Start'),
+              ),
             ],
 
           ),
         ),
     );
   }
+}
+
+showDialogFunc(context) {
+  return showDialog(
+    context: context,
+    builder: (context){
+      return Center(
+        child: Material(
+          type:MaterialType.transparency ,
+          child: Container(
+            height: 380,
+            width: 343,
+            decoration: BoxDecoration(
+              color:Colors.white,
+              borderRadius: BorderRadius.circular(13),
+            ),
+            child: SfDateRangePicker(
+              headerHeight: 50,
+              selectionColor: Color(0xffA3E635),
+              rangeSelectionColor: Color(0xffF7FEE7) ,
+              endRangeSelectionColor: Color(0xffA3E635),
+              startRangeSelectionColor: Color(0xffA3E635),
+              todayHighlightColor: Color(0xffA3E635),
+              view: DateRangePickerView.month,
+              selectionMode: DateRangePickerSelectionMode.multiRange,
+            ),
+          ),
+        ),
+      );
+    }
+  );
 }
 
 
