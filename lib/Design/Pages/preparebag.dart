@@ -1,3 +1,5 @@
+import 'package:application/Design/CustomWidgets/button.dart';
+import 'package:application/Design/Pages/activities.dart';
 import 'package:flutter/material.dart';
 
 
@@ -36,10 +38,24 @@ final supplies = [
         backgroundColor: Colors.transparent,
         elevation: 0,
         ),
-        body:ListView(
-          children: [
-            ...supplies.map(buildSingleCheckbox).toList(),
-          ],),
+        body:Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView(
+            children: [
+              ...supplies.map(buildSingleCheckbox).toList(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => activities()),
+                  );
+                },
+                child: buttondefault(title: 'Ready'),
+              ),
+              
+            ],),
+        ),
+          
         
         
     );
