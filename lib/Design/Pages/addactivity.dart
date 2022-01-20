@@ -1,3 +1,4 @@
+import 'package:application/Design/Pages/activitiesadded.dart';
 import 'package:flutter/material.dart';
 
 class addactivity extends StatelessWidget {
@@ -10,7 +11,15 @@ class addactivity extends StatelessWidget {
         leading: Image.asset('images/chevron-left.png'),
         title: Text("Add activity" ,style: TextStyle(color: Colors.black , fontSize: 20,fontWeight: FontWeight.w500,),),
         actions: [
-          Image.asset('images/checkmark.png'),
+          GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => activitiesadded()),
+                            );
+                          },
+                          child: Image.asset('images/checkmark.png'),
+                        ),
         ],
         backgroundColor: Colors.transparent,
         elevation: 0,
