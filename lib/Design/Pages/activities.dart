@@ -1,5 +1,6 @@
 import 'package:application/Design/CustomWidgets/button.dart'; 
 import 'package:application/Design/Pages/addactivity.dart';
+import 'package:application/Design/Pages/backpack.dart';
 import 'package:application/Design/Pages/drawermenu1.dart';
 import 'package:application/Design/Pages/fitness.dart';
 import 'package:flutter/material.dart';
@@ -180,6 +181,12 @@ class _activitiesState extends State<activities> with TickerProviderStateMixin {
                         GButton(
                           icon: Icons.backpack,
                           text: 'Backpack',
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => backpack()),
+                            );
+                          }
                         ),
                         GButton(
                           icon: Icons.people,
