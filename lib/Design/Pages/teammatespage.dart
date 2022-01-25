@@ -1,32 +1,34 @@
 import 'package:application/Design/Pages/drawermenu1.dart';
+import 'package:application/Design/Pages/teammateview.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:spinner_input/spinner_input.dart';
 
-class backpack extends StatefulWidget {
-  const backpack({Key? key}) : super(key: key);
+class teammatespage extends StatefulWidget {
+  const teammatespage({Key? key}) : super(key: key);
 
   @override
-  State<backpack> createState() => _backpackState();
+  State<teammatespage> createState() => _teammatespageState();
 }
 
-class _backpackState extends State<backpack> with TickerProviderStateMixin {
+class _teammatespageState extends State<teammatespage>
+    with TickerProviderStateMixin {
   double translateX = 0;
   double translateY = 0;
   double scale = 1;
   bool toggle = false;
   late AnimationController _animationController;
 
-  final backpackitems = [
-    backpackcard(title: 'Pillows', image: 'images/Image1.png', spinner: 0),
-    backpackcard(
-        title: 'Sleeping Bag', image: 'images/Image-1.png', spinner: 0),
-    backpackcard(title: 'Tent', image: 'images/Image-2.png', spinner: 0),
-    backpackcard(
-        title: 'AAA Batteries', image: 'images/Image-3.png', spinner: 0),
-    backpackcard(title: 'Shoes', image: 'images/Image-4.png', spinner: 0),
-    backpackcard(title: 'Camera', image: 'images/Image-5.png', spinner: 0),
-    backpackcard(title: 'Charger', image: 'images/Image.png', spinner: 0),
+  final teammatespageitems = [
+    teammatespagecard(
+        name: 'Chandler Hallow', image: 'images/Image-8.png', position: 'Chef'),
+    teammatespagecard(
+        name: 'Emma Linch',
+        image: 'images/Image-6.png',
+        position: 'Environment Expert'),
+    teammatespagecard(
+        name: 'Mike Alen', image: 'images/Image-7.png', position: 'Farmer'),
+    teammatespagecard(
+        name: 'You', image: 'images/Avatar.png', position: 'Web Developer'),
   ];
 
   @override
@@ -72,7 +74,7 @@ class _backpackState extends State<backpack> with TickerProviderStateMixin {
                   },
                 ),
                 title: Text(
-                  "Backpack",
+                  "Teammates",
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 20,
@@ -83,10 +85,10 @@ class _backpackState extends State<backpack> with TickerProviderStateMixin {
                 elevation: 0,
               ),
               body: Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(12.0),
                 child: ListView(
                   children: [
-                    ...backpackitems.map(buildSingleBackpack).toList(),
+                    ...teammatespageitems.map(buildSingleTeammate).toList(),
                   ],
                 ),
               ),
@@ -145,74 +147,68 @@ class _backpackState extends State<backpack> with TickerProviderStateMixin {
     );
   }
 
-  buildSingleBackpack(backpackcard backp) => Column(
+  buildSingleTeammate(teammatespagecard person) => Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    height: 64,
-                    width: 64,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => teammateview()),
+              );
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Image.asset(person.image),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      person.name,
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                     ),
-                    child: Image.asset(backp.image),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    backp.title,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                  ),
-                ],
-              ),
-              SpinnerInput(
-                spinnerValue: backp.spinner,
-                minValue: 0,
-                maxValue: 200,
-                plusButton: SpinnerButtonStyle(
-                  color: Colors.white,
-                  height: 24,
-                  width: 24,
-                  elevation: 3,
-                  highlightElevation: 10,
-                  child: Image.asset('images/+.png'),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      person.position,
+                      style: TextStyle(
+                          color: Color(0xff94949D),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ],
                 ),
-                minusButton: SpinnerButtonStyle(
-                  color: Colors.white,
-                  height: 24,
-                  width: 24,
-                  elevation: 3,
-                  highlightElevation: 10,
-                  child: Image.asset('images/-.png'),
-                ),
-                onChange: (newValue) {
-                  setState(() {
-                    backp.spinner = newValue;
-                  });
-                },
-              ),
-            ],
+              ],
+            ),
           ),
           SizedBox(
-            height: 24,
+            height: 25,
           ),
         ],
       );
 }
 
-class backpackcard {
-  final String title;
+class teammatespagecard {
+  final String name;
+  final String position;
   final String image;
-  double spinner;
 
-  backpackcard({
-    required this.title,
+  teammatespagecard({
+    required this.name,
+    required this.position,
     required this.image,
-    required this.spinner,
   });
 }

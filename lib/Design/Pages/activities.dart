@@ -3,6 +3,7 @@ import 'package:application/Design/Pages/addactivity.dart';
 import 'package:application/Design/Pages/backpack.dart';
 import 'package:application/Design/Pages/drawermenu1.dart';
 import 'package:application/Design/Pages/fitness.dart';
+import 'package:application/Design/Pages/teammatespage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -191,6 +192,12 @@ class _activitiesState extends State<activities> with TickerProviderStateMixin {
                         GButton(
                           icon: Icons.people,
                           text: 'Teammates',
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => teammatespage()),
+                            );
+                          }
                         )
                       ]),
                 )),
