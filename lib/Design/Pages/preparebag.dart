@@ -1,5 +1,5 @@
 import 'package:application/Design/CustomWidgets/button.dart';
-import 'package:application/Design/Pages/activities.dart';
+import 'package:application/Design/Pages/navigationBarPage.dart';
 import 'package:flutter/material.dart';
 import 'package:spinner_input/spinner_input.dart';
 
@@ -47,7 +47,7 @@ final supplies = [
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => activities()),
+                    MaterialPageRoute(builder: (context) => navigationBarPage()),
                   );
                 },
                 child: buttondefault(title: 'Ready'),

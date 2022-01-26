@@ -1,8 +1,8 @@
-import 'package:application/Design/Pages/activities.dart';
 import 'package:application/Design/Pages/catchsnapsempty.dart';
 import 'package:application/Design/Pages/editprofile.dart';
 import 'package:application/Design/Pages/feedback.dart';
 import 'package:application/Design/Pages/logout.dart';
+import 'package:application/Design/Pages/navigationBarPage.dart';
 import 'package:application/Design/Pages/notificationpage.dart';
 import 'package:application/Design/Pages/settings.dart';
 import 'package:application/Design/Pages/tipsandtricks.dart';
@@ -130,7 +130,7 @@ void selectedItem(BuildContext context, int index) {
   switch (index) {
     case 0:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => activities()));
+          .push(MaterialPageRoute(builder: (context) => navigationBarPage()));
           break;
     case 1:
       Navigator.of(context)
