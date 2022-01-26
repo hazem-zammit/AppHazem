@@ -127,7 +127,7 @@ class _tipsandtricksState extends State<tipsandtricks>
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 height: 80,
@@ -143,19 +143,25 @@ class _tipsandtricksState extends State<tipsandtricks>
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    post.title,
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                  Container(
+                    width: 205,
+                    child: Text(
+                      post.title,
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                    ),
                   ),
                   SizedBox(
-                    height: 5,
+                    height: 7,
                   ),
-                  Text(
-                    post.description,
-                    style: TextStyle(
-                        color: Color(0xff94949D),
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400),
+                  Container(
+                    width: 205,
+                    child: Text(
+                      post.description,
+                      style: TextStyle(
+                          color: Color(0xff94949D),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400),
+                    ),
                   ),
                 ],
               ),

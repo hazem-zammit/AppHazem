@@ -21,40 +21,54 @@ class editprofile extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Image.asset('images/Avatar.png'),
-              Text(
-                'Change Profile',
-                style: TextStyle(
-                    color: Color(0xff84CC16),
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          txtfieldmedium(),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            'Message',
-            style: TextStyle(color: Color(0xff71717A), fontSize: 16),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          msgfield(),
-          SizedBox(
-            height: 30,
-          ),
-          buttondefault(title: 'Save'),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Image.asset('images/Avatar.png'),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  'Change Profile',
+                  style: TextStyle(
+                      color: Color(0xff84CC16),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Name',
+              style: TextStyle(color: Color(0xff71717A), fontSize: 16),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            txtfield(),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Message',
+              style: TextStyle(color: Color(0xff71717A), fontSize: 16),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            msgfield(),
+            SizedBox(
+              height: 30,
+            ),
+            buttondefault(title: 'Save'),
+          ],
+        ),
       ),
     );
   }

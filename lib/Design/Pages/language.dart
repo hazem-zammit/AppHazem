@@ -1,20 +1,25 @@
-import 'package:application/Design/CustomWidgets/button.dart';
 import 'package:application/Design/Pages/drawermenu.dart';
 import 'package:flutter/material.dart';
 
-class logout extends StatefulWidget {
-  const logout({Key? key}) : super(key: key);
-
+class language extends StatefulWidget {
   @override
-  State<logout> createState() => _logoutState();
+  State<language> createState() => _languageState();
 }
 
-class _logoutState extends State<logout> with TickerProviderStateMixin {
+class _languageState extends State<language> with TickerProviderStateMixin {
   double translateX = 0;
   double translateY = 0;
   double scale = 1;
   bool toggle = false;
   late AnimationController _animationController;
+
+  final languages = [
+    CheckBoxState(title: 'English'),
+    CheckBoxState(title: 'ودُراُ'),
+    CheckBoxState(title: 'हिंदी'),
+    CheckBoxState(title: 'Español'),
+    CheckBoxState(title: 'Deutsche'),
+  ];
 
   @override
   void initState() {
@@ -59,7 +64,7 @@ class _logoutState extends State<logout> with TickerProviderStateMixin {
                   },
                 ),
                 title: Text(
-                  "Log-out",
+                  "Language",
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 20,
@@ -69,22 +74,10 @@ class _logoutState extends State<logout> with TickerProviderStateMixin {
                 backgroundColor: Colors.transparent,
                 elevation: 0,
               ),
-              body: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Logging out will remove your access from this device. And clean your past data. are you still sure want to log-out?',
-                      style: TextStyle(color: Color(0xff71717A)),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    buttonred(title: 'Log out'),
-                  ],
-                ),
+              body: ListView(
+                children: [
+                  ...languages.map(buildSingleCheckbox).toList(),
+                ],
               ),
             ),
           ),
@@ -92,4 +85,26 @@ class _logoutState extends State<logout> with TickerProviderStateMixin {
       ],
     );
   }
+
+  buildSingleCheckbox(CheckBoxState checkbox) => CheckboxListTile(
+        title: Text(
+          checkbox.title,
+          style: TextStyle(
+              color: Colors.black, fontSize: 16, fontWeight: FontWeight.w400),
+        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+        activeColor: Color(0xff84CC16),
+        value: checkbox.value,
+        onChanged: (value) => setState(() => checkbox.value = value!),
+      );
+}
+
+class CheckBoxState {
+  final String title;
+  bool value;
+
+  CheckBoxState({
+    required this.title,
+    this.value = false,
+  });
 }

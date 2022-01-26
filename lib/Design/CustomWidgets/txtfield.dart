@@ -5,7 +5,7 @@ class msgfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width:295 ,
+      width:335 ,
       child:TextField(
         keyboardType: TextInputType.multiline,
         maxLines: null,

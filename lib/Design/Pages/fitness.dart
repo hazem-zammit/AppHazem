@@ -73,9 +73,7 @@ class _fitnessState extends State<fitness> with TickerProviderStateMixin {
               ),
               body: Padding(
                 padding: const EdgeInsets.all(12.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: ListView(
                   children: [
                     Row(
                       children: [
@@ -84,6 +82,7 @@ class _fitnessState extends State<fitness> with TickerProviderStateMixin {
                         Image.asset('images/Ellipse.png'),
                       ],
                     ), 
+                    SizedBox(height: 5,),
                     Text('You are very good in fitness!',style: TextStyle(color: Color(0xff3F3F46),fontSize: 14,fontWeight:FontWeight.w400),),   
                     SizedBox(height: 30,),
                     FitnessCard(image:'images/running-man.png',title:'Running',description:'200 steps',percentage:80),
@@ -91,6 +90,9 @@ class _fitnessState extends State<fitness> with TickerProviderStateMixin {
                     FitnessCard(image:'images/man-on-mountain.png',title:'Hiking',description:'3Mil',percentage:90),
                     SizedBox(height: 25,),
                     FitnessCard(image:'images/man-drowing.png',title:'Swim',description:'0%',percentage:00),
+                    SizedBox(height: 25,),
+                    FitnessCard(image:'images/boy-doing-pushups.png',title:'Pushups',description:'10',percentage:20),
+                    SizedBox(height: 30,),
                   ],
                 ),
               ),

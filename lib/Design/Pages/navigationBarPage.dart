@@ -25,10 +25,8 @@ class _navigationBarPageState extends State<navigationBarPage> {
     return Scaffold(
       body: IndexedStack(
         index: _selectedIndex,
-        children: 
-screens,
+        children: screens,
       ),
-      
       bottomNavigationBar: Container(
         height: 98,
         decoration: BoxDecoration(

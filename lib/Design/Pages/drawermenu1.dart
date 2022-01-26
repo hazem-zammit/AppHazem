@@ -1,5 +1,6 @@
 import 'package:application/Design/Pages/catchsnapsempty.dart';
 import 'package:application/Design/Pages/editprofile.dart';
+import 'package:application/Design/Pages/exittrip.dart';
 import 'package:application/Design/Pages/feedback.dart';
 import 'package:application/Design/Pages/logout.dart';
 import 'package:application/Design/Pages/navigationBarPage.dart';
@@ -154,7 +155,7 @@ void selectedItem(BuildContext context, int index) {
           break;                     
     case 6:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => logout()));
+          .push(MaterialPageRoute(builder: (context) => exittrip()));
           break    ;  
   }
 }

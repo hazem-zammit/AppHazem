@@ -1,15 +1,15 @@
 import 'package:application/Design/CustomWidgets/button.dart';
-import 'package:application/Design/Pages/drawermenu.dart';
+import 'package:application/Design/Pages/drawermenu1.dart';
 import 'package:flutter/material.dart';
 
-class logout extends StatefulWidget {
-  const logout({Key? key}) : super(key: key);
+class exittrip extends StatefulWidget {
+  const exittrip({Key? key}) : super(key: key);
 
   @override
-  State<logout> createState() => _logoutState();
+  State<exittrip> createState() => _exittripState();
 }
 
-class _logoutState extends State<logout> with TickerProviderStateMixin {
+class _exittripState extends State<exittrip> with TickerProviderStateMixin {
   double translateX = 0;
   double translateY = 0;
   double scale = 1;
@@ -27,7 +27,7 @@ class _logoutState extends State<logout> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        drawermenu(),
+        drawermenu1(),
         AnimatedContainer(
           duration: Duration(milliseconds: 500),
           transform: Matrix4.translationValues(translateX, translateY, 0)
@@ -59,7 +59,7 @@ class _logoutState extends State<logout> with TickerProviderStateMixin {
                   },
                 ),
                 title: Text(
-                  "Log-out",
+                  "Exit Trip",
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 20,
@@ -76,13 +76,13 @@ class _logoutState extends State<logout> with TickerProviderStateMixin {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Logging out will remove your access from this device. And clean your past data. are you still sure want to log-out?',
+                      'Exiting trip will remove your teammember access from the team and you can’t be able to catch it back. Are you still want to exit?',
                       style: TextStyle(color: Color(0xff71717A)),
                     ),
                     SizedBox(
                       height: 20,
                     ),
-                    buttonred(title: 'Log out'),
+                    buttonred(title: 'Exit Anyway'),
                   ],
                 ),
               ),

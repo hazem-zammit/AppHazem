@@ -1,3 +1,8 @@
+import 'package:application/Design/Pages/editprofile.dart';
+import 'package:application/Design/Pages/home.dart';
+import 'package:application/Design/Pages/language.dart';
+import 'package:application/Design/Pages/logout.dart';
+import 'package:application/Design/Pages/howtouse.dart';
 import 'package:flutter/material.dart';
 
 class drawermenu extends StatelessWidget {
@@ -39,9 +44,18 @@ class drawermenu extends StatelessWidget {
                       SizedBox(
                         width: 10,
                       ),
-                      Icon(
-                        Icons.edit_outlined,
-                        color: Color(0xffD9F99D),
+GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => editprofile()),
+                          );
+                        },
+                        child: Icon(
+                          Icons.edit_outlined,
+                          color: Color(0xffD9F99D),
+                        ),
                       ),
                     ],
                   ),
@@ -51,13 +65,15 @@ class drawermenu extends StatelessWidget {
             menulist(
               title: 'Home',
               icnoname: Icons.home,
+              onClicked: () => selectedItem(context, 0),
             ),
             menulist(
               title: 'How to use',
               icnoname: Icons.question_answer,
+              onClicked: () => selectedItem(context, 1),
             ),
-            menulist(title: 'Language', icnoname: Icons.language),
-            menulist(title: 'Log-out', icnoname: Icons.logout),
+            menulist(title: 'Language', icnoname: Icons.language,onClicked: () => selectedItem(context, 2),),
+            menulist(title: 'Log-out', icnoname: Icons.logout,onClicked: () => selectedItem(context, 3),),
           ],
         ),
       ),
@@ -65,18 +81,13 @@ class drawermenu extends StatelessWidget {
   }
 }
 
-class menulist extends StatelessWidget {
-  final String title;
-  final IconData icnoname;
-  const menulist({
-    required this.title,
-    required this.icnoname,
-  });
-
-  @override
-  Widget build(BuildContext context) {
+Widget menulist({
+  required String title,
+  required IconData icnoname,
+  VoidCallback? onClicked,
+}) {
     return ListTile(
-      onTap: () {},
+      onTap:  onClicked,
       leading: Icon(
         icnoname,
         color: Color(0xffD9F99D),
@@ -87,4 +98,28 @@ class menulist extends StatelessWidget {
       ),
     );
   }
+
+
+void selectedItem(BuildContext context, int index) {
+  Navigator.of(context).pop();
+  switch (index) {
+    case 0:
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => home()));
+          break;
+    case 1:
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => howtouse()));
+          break; 
+    case 2:
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => language()));
+          break;  
+    case 3:
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => logout()));
+          break; 
+    
+  }
+
 }

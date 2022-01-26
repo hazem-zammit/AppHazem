@@ -93,12 +93,15 @@ Widget notifcardext({icon, title, text}) {
               SizedBox(
                 height: 5,
               ),
-              Text(
-                text,
-                style: TextStyle(
-                    color: Color(0xff4D7C0F),
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400),
+              Container(
+                width: 220,
+                child: Text(
+                  text,
+                  style: TextStyle(
+                      color: Color(0xff4D7C0F),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400),
+                ),
               ),
             ],
           ),
