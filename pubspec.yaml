@@ -41,7 +41,7 @@ dependencies:
   flutter_switch: ^0.3.2
   spinner_input: ^0.1.2
   introduction_screen: ^2.1.0
-  
+  flutter_animated_splash: ^0.0.9
 
 dev_dependencies:
   flutter_test:
