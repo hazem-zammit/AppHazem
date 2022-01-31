@@ -1,3 +1,4 @@
+import 'package:application/Design/Pages/log_in.dart';
 import 'package:flutter/material.dart';
 import 'Design/Pages/home.dart';
 import 'package:flutter_animated_splash/flutter_animated_splash.dart';
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
         type: Transition.fade,
         curve: Curves.easeInQuart,
         backgroundColor: Color(0xff84CC16),
-        navigator: home(),
+        navigator: log_in(),
         durationInSeconds: 3,
       ),
     );

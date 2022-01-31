@@ -37,6 +37,7 @@ class _feedbackState extends State<feedback> with TickerProviderStateMixin {
             borderRadius:
                 (toggle) ? BorderRadius.circular(20) : BorderRadius.circular(0),
             child: Scaffold(
+              resizeToAvoidBottomInset: false,
               appBar: AppBar(
                 leading: IconButton(
                   icon: AnimatedIcon(

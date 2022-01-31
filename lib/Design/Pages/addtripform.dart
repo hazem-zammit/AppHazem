@@ -12,6 +12,7 @@ class addtripform extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         leading: Image.asset('images/chevron-left.png'),
         title: Text("Add New Trip" ,style: TextStyle(color: Colors.black , fontSize: 20,fontWeight: FontWeight.w500,),),

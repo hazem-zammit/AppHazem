@@ -8,6 +8,7 @@ class editprofile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         leading: Image.asset('images/chevron-left.png'),
         title: Text(

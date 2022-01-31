@@ -1,10 +1,10 @@
 import 'package:application/Design/CustomWidgets/button.dart';
+import 'package:application/Design/Pages/log_in.dart';
 import 'package:flutter/material.dart';
 
-import 'feedback.dart';
 
-class feedbacksubmit extends StatelessWidget {
-  const feedbacksubmit({Key? key}) : super(key: key);
+class passwordchanged extends StatelessWidget {
+  const passwordchanged({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class feedbacksubmit extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                'Thank you for submitting your valuable review. We will read your message soon.',
+                'Your Password changed successfully. please go back and log-in.',
                 style: TextStyle(
                     color: Color(0xff3F3F46),
                     fontSize: 16,
@@ -41,7 +41,7 @@ class feedbacksubmit extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => feedback()),
+                    MaterialPageRoute(builder: (context) => log_in()),
                   );
                 },
                 child: buttondefault(title: 'Go Back'),

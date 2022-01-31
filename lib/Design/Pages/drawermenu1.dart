@@ -2,7 +2,6 @@ import 'package:application/Design/Pages/catchsnapsempty.dart';
 import 'package:application/Design/Pages/editprofile.dart';
 import 'package:application/Design/Pages/exittrip.dart';
 import 'package:application/Design/Pages/feedback.dart';
-import 'package:application/Design/Pages/logout.dart';
 import 'package:application/Design/Pages/navigationBarPage.dart';
 import 'package:application/Design/Pages/notificationpage.dart';
 import 'package:application/Design/Pages/settings.dart';
