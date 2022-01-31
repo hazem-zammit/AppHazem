@@ -27,6 +27,8 @@ linter:
     camel_case_types: false
     prefer_const_literals_to_create_immutables: false
     use_key_in_widget_constructors: false
+    non_constant_identifier_names: false
+    
 
 
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule

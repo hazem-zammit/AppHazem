@@ -1,12 +1,11 @@
 import 'package:application/Design/CustomWidgets/button.dart';
 import 'package:application/Design/CustomWidgets/txtfield.dart';
-import 'package:application/Design/Pages/home.dart';
-import 'package:application/Design/Pages/forgetpassword.dart';
-import 'package:application/Design/Pages/sign_up.dart';
+import 'package:application/Design/Pages/confirm_otp.dart';
+import 'package:application/Design/Pages/log_in.dart';
 import 'package:flutter/material.dart';
 
-class log_in extends StatelessWidget {
-  const log_in({Key? key}) : super(key: key);
+class sign_up extends StatelessWidget {
+  const sign_up({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +19,38 @@ class log_in extends StatelessWidget {
           children: [
             Image.asset('images/Logob.png'),
             SizedBox(
-              height: 60,
+              height: 50,
+            ),
+            Text(
+              'Name',
+              style: TextStyle(
+                  color: Color(0xff71717A),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            txtfieldmedium(),
+            SizedBox(
+              height: 20,
             ),
             Text(
               'Email',
+              style: TextStyle(
+                  color: Color(0xff71717A),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            txtfieldmedium(),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Phone',
               style: TextStyle(
                   color: Color(0xff71717A),
                   fontSize: 16,
@@ -51,21 +78,14 @@ class log_in extends StatelessWidget {
               height: 20,
             ),
             InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => forgetpassword()),
-                );
-              },
-              child: Center(
-                  child: Text(
-                'Forgot Password?',
-                style: TextStyle(
-                    color: Color(0xffA1A1AA),
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400),
-              )),
-            ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => confirm_otp_registration()),
+                  );
+                },
+                child: buttonmedium(title: 'Register')),
             SizedBox(
               height: 20,
             ),
@@ -73,21 +93,10 @@ class log_in extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => home()),
+                    MaterialPageRoute(builder: (context) => log_in()),
                   );
                 },
-                child: buttonmedium(title: 'Log In')),
-            SizedBox(
-              height: 20,
-            ),
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => sign_up()),
-                  );
-                },
-                child: buttonoutlined(title: 'Register')),
+                child: buttonoutlined(title: 'Log In')),
           ],
         ),
       ),

@@ -1,7 +1,6 @@
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:application/Design/Pages/drawermenu1.dart';
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 
 class fitness extends StatefulWidget {
   const fitness({Key? key}) : super(key: key);

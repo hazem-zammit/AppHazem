@@ -8,7 +8,9 @@ class addactivity extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Image.asset('images/chevron-left.png'),
+        leading: InkWell(
+            onTap: () => Navigator.of(context).pop(),
+            child: Image.asset('images/chevron-left.png')),
         title: Text("Add activity" ,style: TextStyle(color: Colors.black , fontSize: 20,fontWeight: FontWeight.w500,),),
         actions: [
           GestureDetector(

@@ -1,7 +1,6 @@
 import 'package:application/Design/CustomWidgets/button.dart';
 import 'package:application/Design/CustomWidgets/txtfield.dart';
-import 'package:application/Design/Pages/confirm_otp.dart';
-import 'package:application/Design/passwordchanged.dart';
+import 'package:application/Design/Pages/passwordchanged.dart';
 import 'package:flutter/material.dart';
 
 class setnewpassword extends StatelessWidget {
@@ -12,7 +11,9 @@ class setnewpassword extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        leading: Image.asset('images/chevron-left.png'),
+        leading: InkWell(
+            onTap: () => Navigator.of(context).pop(),
+            child: Image.asset('images/chevron-left.png')),
         title: Text(
           "New Password",
           style: TextStyle(

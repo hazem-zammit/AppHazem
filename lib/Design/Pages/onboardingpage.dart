@@ -1,5 +1,7 @@
 import 'package:application/Design/CustomWidgets/button.dart';
-import 'package:application/Design/Pages/home.dart';
+import 'package:application/Design/Pages/log_in.dart';
+import 'package:application/Design/Pages/sign_up.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -47,7 +49,15 @@ class onboardingpage extends StatelessWidget {
           height: 150,
           child: Column(
             children: [
-              buttondefault(title: 'Log in'),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => log_in()),
+                  );
+                },
+                child: buttondefault(title: 'Log in'),
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -58,13 +68,21 @@ class onboardingpage extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
                       color: Color(0xff18181B)),
-                  children: const <TextSpan>[
+                  children: [
                     TextSpan(
-                        text: 'Register',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                            color: Color(0xff18181B))),
+                      text: 'Register',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Color(0xff18181B)),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => sign_up()),
+                          );
+                        },
+                    ),
                   ],
                 ),
               )
@@ -96,6 +114,6 @@ class onboardingpage extends StatelessWidget {
         color: Color(0xffD9F99D),
         activeColor: Color(0xff84CC16),
         size: Size(8, 8),
-        activeSize: Size(10,10),
-        );
+        activeSize: Size(10, 10),
+      );
 }

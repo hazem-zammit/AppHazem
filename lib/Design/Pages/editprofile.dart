@@ -10,7 +10,9 @@ class editprofile extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        leading: Image.asset('images/chevron-left.png'),
+        leading: InkWell(
+            onTap: () => Navigator.of(context).pop(),
+            child: Image.asset('images/chevron-left.png')),
         title: Text(
           "Edit Profile",
           style: TextStyle(

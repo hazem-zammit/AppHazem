@@ -1,6 +1,5 @@
 import 'package:application/Design/Pages/drawermenu1.dart';
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 
 class tipsandtricks extends StatefulWidget {
   const tipsandtricks({Key? key}) : super(key: key);

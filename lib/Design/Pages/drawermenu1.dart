@@ -2,7 +2,7 @@ import 'package:application/Design/Pages/catchsnapsempty.dart';
 import 'package:application/Design/Pages/editprofile.dart';
 import 'package:application/Design/Pages/exittrip.dart';
 import 'package:application/Design/Pages/feedback.dart';
-import 'package:application/Design/Pages/navigationBarPage.dart';
+import 'package:application/Design/Pages/navigation_bar_page.dart';
 import 'package:application/Design/Pages/notificationpage.dart';
 import 'package:application/Design/Pages/settings.dart';
 import 'package:application/Design/Pages/tipsandtricks.dart';
@@ -22,13 +22,17 @@ class drawermenu1 extends StatelessWidget {
         child: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(
+                    height: 20,
+                  ),
                   CircleAvatar(
-                    backgroundImage: AssetImage('images/avatar.png'),
+                    radius: 32,
+                    backgroundImage: AssetImage('images/Avatar.png'),
                     backgroundColor: Color(0xffECFCCB),
                   ),
                   SizedBox(
@@ -113,6 +117,7 @@ Widget menulist({
   VoidCallback? onClicked,
 }) {
   return ListTile(
+    horizontalTitleGap: 10,
     onTap: onClicked,
     leading: Icon(
       icnoname,
@@ -131,30 +136,30 @@ void selectedItem(BuildContext context, int index) {
     case 0:
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => navigationBarPage()));
-          break;
+      break;
     case 1:
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => tipsandtricks()));
-          break; 
+      break;
     case 2:
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => notificationpage()));
-          break;  
+      break;
     case 3:
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => catchsnapsempty()));
-          break; 
+      break;
     case 4:
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => settings()));
-          break;     
+      break;
     case 5:
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => feedback()));
-          break;                     
+      break;
     case 6:
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => exittrip()));
-          break    ;  
+      break;
   }
 }

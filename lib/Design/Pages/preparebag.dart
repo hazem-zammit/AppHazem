@@ -1,5 +1,5 @@
 import 'package:application/Design/CustomWidgets/button.dart';
-import 'package:application/Design/Pages/navigationBarPage.dart';
+import 'package:application/Design/Pages/navigation_bar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:spinner_input/spinner_input.dart';
 
@@ -30,7 +30,9 @@ final supplies = [
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Image.asset('images/chevron-left.png'),
+        leading: InkWell(
+            onTap: () => Navigator.of(context).pop(),
+            child: Image.asset('images/chevron-left.png')),
         title: Text("Prepare your Bag " ,style: TextStyle(color: Colors.black , fontSize: 20,fontWeight: FontWeight.w500,),),
         actions: [
           Image.asset('images/plus1.png'),

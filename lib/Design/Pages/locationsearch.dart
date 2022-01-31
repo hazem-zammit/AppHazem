@@ -2,12 +2,11 @@ import 'package:application/Design/Pages/locationview.dart';
 import 'package:flutter/material.dart';
 
 class locationsearch extends StatelessWidget {
-  const locationsearch({ Key? key }) : super(key: key);
+  const locationsearch({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -26,17 +25,19 @@ class locationsearch extends StatelessWidget {
                     width: 223,
                     child: TextField(
                       decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Color(0xFFfafafa),
-                      focusColor: Colors.white,
-                      enabledBorder: OutlineInputBorder (
-                        borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                        borderSide: BorderSide(color: Color(0xff84CC16), width: 1),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                        borderSide: BorderSide(color: Color(0xff84CC16), width:2),
-                      ),        
+                        filled: true,
+                        fillColor: Color(0xFFfafafa),
+                        focusColor: Colors.white,
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                          borderSide:
+                              BorderSide(color: Color(0xff84CC16), width: 1),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                          borderSide:
+                              BorderSide(color: Color(0xff84CC16), width: 2),
+                        ),
                       ),
                     ),
                   ),
@@ -54,20 +55,19 @@ class locationsearch extends StatelessWidget {
               SizedBox(
                 height: 40,
               ),
-              GestureDetector(onTap:(){
-                 Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => locationview()),
-                );
-              } ,
-              child: locationcard(),),
-              
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => locationview()),
+                  );
+                },
+                child: locationcard(),
+              ),
             ],
-      
           ),
         ),
       ),
-      
     );
   }
 }
@@ -86,8 +86,7 @@ class locationcard extends StatelessWidget {
           width: 100,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(
-                  'images/Campingimage.png'),
+              image: AssetImage('images/Campingimage.png'),
               fit: BoxFit.fill,
             ),
             borderRadius: BorderRadius.circular(16),
@@ -99,14 +98,25 @@ class locationcard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Catalina Island', style: TextStyle(color: Colors.black, fontSize: 20,fontWeight: FontWeight.w600,),),
-              SizedBox(height: 5,),
-              Text('Los Angeles, California', style: TextStyle(color: Colors.black, fontSize: 12),),
-            ],),
+              Text(
+                'Catalina Island',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Text(
+                'Los Angeles, California',
+                style: TextStyle(color: Colors.black, fontSize: 12),
+              ),
+            ],
+          ),
         ),
-        
       ],
-      
     );
   }
 }

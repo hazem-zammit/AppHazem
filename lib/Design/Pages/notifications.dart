@@ -8,7 +8,9 @@ class notifications extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Image.asset('images/chevron-left.png'),
+        leading: InkWell(
+            onTap: () => Navigator.of(context).pop(),
+            child: Image.asset('images/chevron-left.png')),
         title: Text(
           "Notifications",
           style: TextStyle(

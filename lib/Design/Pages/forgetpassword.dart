@@ -11,7 +11,10 @@ class forgetpassword extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        leading: Image.asset('images/chevron-left.png'),
+        leading: InkWell(
+          onTap: ()=>Navigator.of(context).pop(),
+          child: Image.asset('images/chevron-left.png')
+          ),
         title: Text(
           "Forgot Password",
           style: TextStyle(
