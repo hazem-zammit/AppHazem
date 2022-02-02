@@ -4,14 +4,14 @@ import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
-class catchsnapsempty extends StatefulWidget {
-  const catchsnapsempty({Key? key}) : super(key: key);
+class catchsnapsfilled extends StatefulWidget {
+  const catchsnapsfilled({Key? key}) : super(key: key);
 
   @override
-  State<catchsnapsempty> createState() => _catchsnapsemptyState();
+  State<catchsnapsfilled> createState() => _catchsnapsfilledState();
 }
 
-class _catchsnapsemptyState extends State<catchsnapsempty>
+class _catchsnapsfilledState extends State<catchsnapsfilled>
     with TickerProviderStateMixin {
   double translateX = 0;
   double translateY = 0;
@@ -81,27 +81,47 @@ class _catchsnapsemptyState extends State<catchsnapsempty>
                 backgroundColor: Colors.transparent,
                 elevation: 0,
               ),
-              body: Center(
+              body: Padding(
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Image.asset('images/Illustrationsnaps.png'),
-                    SizedBox(
-                      height: 20,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('14 Feb 2020',style: TextStyle(fontSize: 12,color: Color(0xffA1A1AA)),),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              height: 240,
+                              width: 155,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Image.asset('images/Imagec.png'),
+                            ),
+                            Container(
+                              height: 240,
+                              width: 155,
+                              decoration: BoxDecoration(
+                                color: Color(0xffF4F4F5),
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Image.asset('images/plus.png'),
+                            ),
+
+                          ],
+                        ),
+                      ],
                     ),
-                    Text(
-                      'You didn’t catch any snaps yet.',
-                      style: TextStyle(
-                        color: Color(0xff3F3F46),
-                        fontSize: 16,
-                      ),
+                    Center(
+                      child: InkWell(
+                          onTap: getImage,
+                          child: buttonmedium(title: 'Click New Snap')),
                     ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    InkWell(
-                        onTap: getImage,
-                        child: buttonsmalloutlined(title: 'Click Snaps')),
                   ],
                 ),
               ),

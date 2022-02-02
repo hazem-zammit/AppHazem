@@ -19,7 +19,9 @@ class locationsearch extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Image.asset('images/chevron-left.png'),
+                  InkWell(
+                    onTap: () => Navigator.of(context).pop(),
+                    child: Image.asset('images/chevron-left.png'), ),
                   Container(
                     height: 48,
                     width: 223,

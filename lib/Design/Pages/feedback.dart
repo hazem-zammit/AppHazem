@@ -72,7 +72,7 @@ class _feedbackState extends State<feedback> with TickerProviderStateMixin {
                 elevation: 0,
               ),
               body: Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,

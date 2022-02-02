@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
         curve: Curves.easeInQuart,
         backgroundColor: Color(0xff84CC16),
         navigator: onboardingpage(),
-        durationInSeconds: 3,
+        durationInSeconds: 2,
       ),
     );
   }
